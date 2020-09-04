@@ -2,14 +2,15 @@ name: CI
 on: [push]
 
 jobs:
-  checkRunCI:
+  checkRunCi:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Run check contains [ci:]
-        run: echo checkRunCI.
+        run: echo checkRunCi.
 
   build:
+    needs: checkRunCi
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
