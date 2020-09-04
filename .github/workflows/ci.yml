@@ -4,6 +4,7 @@ on: [push]
 jobs:
   checkRunCi:
     runs-on: ubuntu-latest
+    if: false
     steps:
       - uses: actions/checkout@v2
       - name: Run check contains [ci:]
