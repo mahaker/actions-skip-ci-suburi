@@ -4,7 +4,7 @@ on: [push]
 jobs:
   checkRunCi:
     runs-on: ubuntu-latest
-    if: true
+    if: "contains(github.event.head_commit.message, 'ci:')"
     steps:
       - uses: actions/checkout@v2
       - name: Run check contains [ci:]
